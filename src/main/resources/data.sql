@@ -1,7 +1,7 @@
 drop table if exists student;
 
 create table student(
-    id int primary key,
+    id int auto_increment,
     name varchar(255),
     birth_date date,
     address varchar(255)
