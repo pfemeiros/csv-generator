@@ -1,6 +1,5 @@
 package br.com.pfemeiros.csvgenerator.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvDate;
 import lombok.AllArgsConstructor;

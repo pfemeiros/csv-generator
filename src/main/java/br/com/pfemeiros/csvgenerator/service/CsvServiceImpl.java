@@ -3,15 +3,15 @@ package br.com.pfemeiros.csvgenerator.service;
 import br.com.pfemeiros.csvgenerator.model.Student;
 import br.com.pfemeiros.csvgenerator.model.StudentCsv;
 import br.com.pfemeiros.csvgenerator.repository.StudentRepository;
-import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.server.ResponseStatusException;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.io.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -42,8 +42,9 @@ public class CsvServiceImpl implements CsvService {
     }
 
     @Override
-    public byte[] download() {
-        return new byte[0];
+    public ByteArrayInputStream download() {
+        // TODO implement
+        return null;
     }
 
 }
